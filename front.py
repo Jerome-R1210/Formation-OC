@@ -2,8 +2,7 @@ import streamlit as st
 import requests
 
 # URL de votre API Flask
-API_URL = 'http://localhost:8080/predict'
-API_URL = 'https://jeromer1210.pythonanywhere.com'
+API_URL = 'https://whispering-tundra-39675-b773c5580ef7.herokuapp.com/'
 
 # Fonction pour faire une requête POST à l'API Flask
 def predict_loan_approval(client_id):
