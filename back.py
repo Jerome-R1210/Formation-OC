@@ -2,18 +2,30 @@ from flask import Flask, request, jsonify
 import lightgbm as lgb
 import pandas as pd
 import joblib
+import requests
+from io import BytesIO
 
 # Initialize the Flask application
 app = Flask(__name__)
 
-# Load the pre-trained LightGBM model
-model_path = r"C:\Users\jerom\Formation OC\Projet 7\pipeline_p7.joblib"
-model = joblib.load(model_path)
+# Define the URL to download the model and data from GitHub
+data_url = 'https://raw.githubusercontent.com/Jerome-R1210/Formation-OC/master/app_train_sample.csv?token=GHSAT0AAAAAACVYF4Q6YS547JYJ45SH7TWKZV3ONYA'
+model_url = 'https://github.com/Jerome-R1210/Formation-OC/raw/master/pipeline_p7.joblib'
+
+# Load the pre-trained LightGBM model from URL
+def load_model_from_url(url):
+    response = requests.get(url)
+    model = joblib.load(BytesIO(response.content))
+    return model
+
+# Load the model
+model = load_model_from_url(model_url)
 
 # Function to fetch client data based on client_id
 def get_client_data(client_id):
+
     # Load the client data from CSV
-    client_data = pd.read_csv(r"C:\Users\jerom\Formation OC\Projet 7\app_train.csv")
+    client_data = pd.read_csv(data_url)
     
     # Filter the client data based on client_id
     client_data = client_data[client_data['SK_ID_CURR'] == int(client_id)]
