@@ -30,3 +30,5 @@ tf_keras==2.16.0
 tokenizers==0.19.1
 uvicorn==0.30.6
 virtualenv==20.26.3
+whitenoise==6.0.0
+
