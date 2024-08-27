@@ -40,7 +40,12 @@ def get_client_data(client_id):
     
     return client_data
 
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['GET'])
+def index():
+    return "API is running. Please use /predict to make a prediction."
+
+
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
         # Get the client_id from the request
