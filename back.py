@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 import lightgbm as lgb
 import pandas as pd
