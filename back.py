@@ -40,7 +40,7 @@ def get_client_data(client_id):
     
     return client_data
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict():
     try:
         # Get the client_id from the request
