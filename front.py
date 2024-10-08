@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import requests
 
 # URL de l'API Flask
-API_URL = 'https://apiprojet8.herokuapp.com/predict'
+API_URL = 'https://apiprojet8-87cd68b59ab6.herokuapp.com/predict'
 #API_URL = 'http://127.0.0.1:8080/predict'
 
 # URL des données clients
