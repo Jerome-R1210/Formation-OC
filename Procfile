@@ -1,2 +1,2 @@
-web: python back.py
+web: streamlit run front.py
 streamlit: python front.py
