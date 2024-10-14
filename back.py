@@ -1,5 +1,6 @@
 import os
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import lightgbm as lgb
 import pandas as pd
 import joblib
@@ -8,6 +9,7 @@ from io import BytesIO
 
 # Initialize the Flask application
 app = Flask(__name__)
+CORS(app) # Activer CORS pour accepter les requêtes cross-origin
 
 # Define the URL to download the model and data from GitHub
 data_url = 'https://github.com/Jerome-R1210/Formation-OC/blob/18ba732f3d774bcde4cb1c93f2852615ce44ccc6/app_train_sample.csv'
