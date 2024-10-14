@@ -1,1 +1,1 @@
-aa
+web: streamlit run front.py
