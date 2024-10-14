@@ -13,7 +13,7 @@ CORS(app) # Activer CORS pour accepter les requêtes cross-origin
 
 # Define the URL to download the model and data from GitHub
 data_url = 'https://raw.githubusercontent.com/Jerome-R1210/Formation-OC/refs/heads/backend/app_train_sample.csv'
-model_url = 'https://github.com/Jerome-R1210/Formation-OC/blob/backend/pipeline_p7.joblib'
+model_url = 'https://raw.githubusercontent.com/Jerome-R1210/Formation-OC/backend/pipeline_p7.joblib'
 
 # Load the pre-trained LightGBM model from URL
 def load_model_from_url(url):
