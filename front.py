@@ -17,8 +17,8 @@ import numpy as np
 # URL de l'API Flask
 API_URL = 'https://apiprojet8-87cd68b59ab6.herokuapp.com/predict'
 # Define the URL to download the model and data from GitHub
-data_url = 'https://github.com/Jerome-R1210/Formation-OC/blob/18ba732f3d774bcde4cb1c93f2852615ce44ccc6/app_train_sample.csv'
-model_url = 'https://github.com/Jerome-R1210/Formation-OC/blob/18ba732f3d774bcde4cb1c93f2852615ce44ccc6/pipeline_p7.joblib'
+data_url = 'https://raw.githubusercontent.com/Jerome-R1210/Formation-OC/refs/heads/backend/app_train_sample.csv'
+model_url = 'https://raw.githubusercontent.com/Jerome-R1210/Formation-OC/backend/pipeline_p7.joblib'
 
 # Fonction pour appeler l'API Flask et obtenir la probabilité de crédit
 @st.cache_data
